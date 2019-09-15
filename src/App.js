@@ -9,15 +9,18 @@ class App extends React.Component {
   constructor() {
     super();
 
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
     this.state = {
       posts: [],
       subreddit: '',
       subscribers: '',
       banner: '',
       loading: true,
+      userInput: '',
     };
   }
-  // https://cdn.pixabay.com/photo/2015/03/17/02/01/cubes-677092_640.png
 
   async componentDidMount() {
     let [posts, banner] = await Promise.all([
@@ -32,6 +35,17 @@ class App extends React.Component {
       loading: false });
   }
 
+  handleChange(event) {
+    // console.log(event);
+    // this.setState({ userInput: event.target.value })
+  }
+
+  handleSubmit(event) {
+    // console.log(event);
+    // alert('form submitted: ' + this.state.userInput);
+    event.preventDefault();
+  }
+
   render() {
     let backgroundBanner = {
       backgroundImage: `url(${this.state.banner})`
@@ -44,8 +58,8 @@ class App extends React.Component {
             <i className="fab fa-reddit-alien"></i>
             Reddit Finder
           </div>
-          <form id="redditForm">
-            <input type="text" name="subreddit" placeholder="Enter a topic..."/>
+          <form id="redditForm" onSubmit={this.handleSubmit}>
+            <input type="text" name="subreddit" placeholder="Enter a topic..." onChange={this.handleChange}/>
             <button type="submit">Go!</button>
           </form>
         </div>
