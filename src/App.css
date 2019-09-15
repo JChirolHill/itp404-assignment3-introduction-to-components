@@ -57,6 +57,14 @@ button {
   padding: 0 20px;
 }
 
+#topData {
+  color: #f06c6c;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0 10px 0;
+  width: 100%;
+}
+
 #results {
   display: flex;
   flex-wrap: wrap;
@@ -90,7 +98,7 @@ button {
   border-radius: 10px;
 }
 
-.resultOverlay, .resultContent, .resultScore, .fullOverlay {
+.resultOverlay, .resultContent, .topContent, .fullOverlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -122,12 +130,14 @@ button {
   padding-bottom: 10px;
 }
 
-.resultScore {
+.topContent {
   text-align: right;
   padding: 15px;
   color: white;
   top: 0;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
 #error {
@@ -156,7 +166,7 @@ button {
   animation: load7 1.8s infinite ease-in-out;
 }
 .loader {
-  display: none;
+  /* display: none; */
   color: #f06c6c;
   font-size: 10px;
   margin: 80px auto;
