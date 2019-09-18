@@ -41,6 +41,85 @@ button {
   margin: 10px auto;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+.readCount {
+  position: fixed;
+  z-index: 5;
+  top: 30px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #eb4d4d;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.5);
+}
+
+.previousSearches {
+  position: fixed;
+  z-index: 5;
+  top: 100px;
+  right: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #eb4d4d;
+  text-align: center;
+  padding: 0 20px;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.5);
+}
+
+.previousSearches p {
+  font-size: 25px;
+  border-bottom: 1px solid #eb4d4d;
+  margin-bottom: 0;
+}
+
+.previousSearches button {
+  font-size: 20px;
+  padding: 0;
+  transition: all 0.5s;
+}
+
+.previousSearches button:hover {
+  color: #f58989;
+  font-size: 21px;
+}
+
+.previousSearches i {
+  transition: all 0.5s;
+}
+
+.previousSearches i:hover {
+  cursor: pointer;
+  color: #f58989;
+}
+
+.previousSearches .fa-times {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.previousSearches .fa-bars {
+  padding: 20px 0;
+  font-size: 30px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s;
+}
+
+.previousSearches .fa-bars:hover {
+  font-size: 35px;
+  line-height: 35px;
+}
+
 .header {
   padding: 100px 0 60px 0;
   text-align: center;
@@ -142,7 +221,6 @@ button {
 
 #error {
   margin: 40px 0;
-  display: none;
   text-align: center;
   color: #f06c6c;
   font-size: 30px;
